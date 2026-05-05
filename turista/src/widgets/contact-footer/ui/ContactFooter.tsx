@@ -132,15 +132,15 @@ export function ContactFooter({ contactInfo }: ContactFooterProps) {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
-          <Link href={`https://wa.me/${cleanPhone1}?text=${waMessage}`} target="_blank" rel="noopener noreferrer" aria-label="Reservar tour por WhatsApp">
+          <a href={`https://wa.me/${cleanPhone1}?text=${waMessage}`} target="_blank" rel="noopener noreferrer" aria-label="Reservar tour por WhatsApp">
             <Button
               size="lg"
-              className="h-16 px-10 rounded-full bg-[#25D366] hover:bg-[#1DA851] text-white text-lg font-semibold shadow-[0_0_20px_rgba(37,211,102,0.4)] transition-all hover:scale-105"
+              className="w-full h-14 rounded-xl !bg-[#25D366] hover:!bg-[#1DA851] text-white shadow-[0_4px_14px_rgba(37,211,102,0.3)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.4)] transition-all hover:-translate-y-0.5 text-base font-semibold"
             >
-              <MessageCircle className="mr-3 h-6 w-6" />
+              <MessageCircle className="mr-2 h-5 w-5" />
               Reservar por WhatsApp
             </Button>
-          </Link>
+          </a>
           <p className="text-white/80 text-sm mt-3 font-medium flex items-center gap-1.5">
             <span>⚡</span> Respondemos en menos de 10 minutos
           </p>
@@ -162,12 +162,15 @@ export function ContactFooter({ contactInfo }: ContactFooterProps) {
                 Llamar
               </Button>
             </Link>
-            <Link href={`https://wa.me/${cleanPhone2}?text=${waMessage}`} target="_blank" rel="noopener noreferrer" aria-label="Contactar al número alterno" className="w-full">
-              <Button variant="outline" className="w-full h-12 rounded-full bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-stone-900 transition-all active:scale-95">
+            <a href={`https://wa.me/${cleanPhone2}?text=${waMessage}`} target="_blank" rel="noopener noreferrer" aria-label="Contactar al número alterno" className="w-full">
+              <Button
+                variant="outline"
+                className="w-full h-12 rounded-xl border-stone-800 bg-stone-900/50 hover:bg-stone-800 text-stone-300 hover:text-white transition-colors"
+              >
                 <MessageCircle className="mr-2 h-4 w-4" />
-                Otro número
+                Número alterno
               </Button>
-            </Link>
+            </a>
             <Link href={`mailto:${emailVal}`} aria-label="Enviar correo electrónico" className="w-full col-span-2 md:col-span-1">
               <Button variant="outline" className="w-full h-12 rounded-full bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-stone-900 transition-all active:scale-95">
                 <Mail className="mr-2 h-4 w-4" />

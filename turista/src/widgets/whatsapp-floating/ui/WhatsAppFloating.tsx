@@ -21,7 +21,7 @@ export function WhatsAppFloating({ contactInfo }: WhatsAppFloatingProps) {
   }, []);
 
   return (
-    <Link
+    <a
       href={`https://wa.me/${phone.replace(/\D/g, '')}?text=Hola%2C%20me%20interesa%20reservar%20un%20tour%20de%20cenotes`}
       target="_blank"
       rel="noopener noreferrer"
@@ -34,6 +34,6 @@ export function WhatsAppFloating({ contactInfo }: WhatsAppFloatingProps) {
 
       {/* Pulso de atención */}
       <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-25" />
-    </Link>
+    </a>
   );
 }

@@ -240,11 +240,11 @@ export function Header() {
 
          {/* FOOTER DRAWER */}
          <div className="shrink-0 pt-3 border-t border-stone-200 flex flex-col gap-3">
-             <Link href={`https://wa.me/${FALLBACK_DATA.contacto.telefono_whatsapp_principal.replace(/\D/g, '')}`} target="_blank" className="w-full" onClick={closeMobileMenu}>
+             <a href={`https://wa.me/${FALLBACK_DATA.contacto.telefono_whatsapp_principal.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="w-full" onClick={closeMobileMenu}>
                 <Button className="w-full h-12 bg-[#25D366] hover:bg-[#1DA851] text-white rounded-xl shadow-md font-semibold text-base transition-all active:scale-[0.97]">
                    <MessageCircle className="mr-2 h-5 w-5" /> Reservar por WhatsApp
                 </Button>
-             </Link>
+             </a>
 
              <div className="flex justify-center gap-5 pb-4">
                <Link href="https://www.facebook.com/share/18C6QNCUUg/" target="_blank" className="p-2.5 rounded-full bg-stone-100 hover:bg-[#1877F2]/15 transition-colors active:scale-95">

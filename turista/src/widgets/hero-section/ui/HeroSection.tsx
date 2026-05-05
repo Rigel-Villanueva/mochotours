@@ -80,12 +80,12 @@ export function HeroSection() {
         {/* CALL TO ACTIONS */}
         <div className="animate-in fade-in slide-in-from-bottom-8 duration-700 delay-500 fill-mode-backwards flex flex-col sm:flex-row items-center justify-center gap-4 mt-12 mb-28 sm:mb-0 w-full lg:w-auto">
           
-          <Link href={`https://wa.me/${washappNumber.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+          <a href={`https://wa.me/${washappNumber.replace(/\\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
              <Button size="lg" className="h-14 py-4 px-8 rounded-full !bg-[#25D366] hover:!bg-[#1DA851] text-white text-base font-semibold shadow-[0_0_15px_rgba(37,211,102,0.4)] transition-all hover:scale-105 w-full sm:w-auto">
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Reservar por WhatsApp
              </Button>
-          </Link>
+          </a>
 
           <Link href="#galeria" className="w-full sm:w-auto">
              <Button variant="outline" size="lg" className="h-14 py-4 px-8 rounded-full border border-white/80 text-white/90 bg-transparent hover:bg-white/10 hover:text-white backdrop-blur-sm transition-all w-full sm:w-auto">
