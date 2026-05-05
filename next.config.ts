@@ -12,6 +12,7 @@ const nextConfig: NextConfig = {
   // Permite al componente <Image> de Next.js procesar imágenes
   // remotas desde Supabase Storage y generar formatos WebP/AVIF
   // automáticamente con múltiples tamaños.
+  output: 'standalone',
   images: {
     // Desactivamos la optimización para ahorrar RAM en el servidor de Hostinger
     // y evitar errores de resolución de IP privada (localhost) en desarrollo.
