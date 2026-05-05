@@ -2,3 +2,9 @@ Fotos_Prueba/
 Lo que se hara/
 *.txt
 *.sql
+
+*.env
+/*.png
+/*.jpg
+/*.jpeg
+/*.svg
