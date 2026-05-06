@@ -61,8 +61,10 @@ export function ContactFooter({ contactInfo }: ContactFooterProps) {
   // Datos dinámicos de contacto provenientes de ISR (contact_info)
   const phone1 = contactInfo?.phonePrimary || FALLBACK_DATA.contacto.telefono_whatsapp_principal;
   const phone2 = contactInfo?.phoneSecondary || FALLBACK_DATA.contacto.telefono_whatsapp_secundario;
-  const cleanPhone1 = phone1.replace(/\D/g, '');
-  const cleanPhone2 = phone2.replace(/\D/g, '');
+  let cleanPhone1 = phone1.replace(/\D/g, '');
+  let cleanPhone2 = phone2.replace(/\D/g, '');
+  if (cleanPhone1.length === 10 && !cleanPhone1.startsWith('52')) cleanPhone1 = '52' + cleanPhone1;
+  if (cleanPhone2.length === 10 && !cleanPhone2.startsWith('52')) cleanPhone2 = '52' + cleanPhone2;
   const emailVal = contactInfo?.email || 'mochotours.homun@gmail.com';
 
   // SVG icons para redes (no existen en lucide-react)

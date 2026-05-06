@@ -13,6 +13,11 @@ interface WhatsAppFloatingProps {
 export function WhatsAppFloating({ contactInfo }: WhatsAppFloatingProps) {
   const [show, setShow] = useState(false);
   const phone = contactInfo?.phonePrimary || FALLBACK_DATA.contacto.telefono_whatsapp_principal;
+  
+  let cleanPhone = phone.replace(/\D/g, '');
+  if (cleanPhone.length === 10 && !cleanPhone.startsWith('52')) {
+    cleanPhone = '52' + cleanPhone;
+  }
 
   useEffect(() => {
     const handleScroll = () => setShow(window.scrollY > 300);
@@ -22,7 +27,7 @@ export function WhatsAppFloating({ contactInfo }: WhatsAppFloatingProps) {
 
   return (
     <a
-      href={`https://wa.me/${phone.replace(/\D/g, '')}?text=Hola%2C%20me%20interesa%20reservar%20un%20tour%20de%20cenotes`}
+      href={`https://wa.me/${cleanPhone}?text=Hola%2C%20me%20interesa%20reservar%20un%20tour%20de%20cenotes`}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contáctanos por WhatsApp"
